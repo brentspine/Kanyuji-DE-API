@@ -1,0 +1,13 @@
+name: api
+version: 1.0.0
+author: Brentspine
+api-version: 1.16
+main: de.brentspine.kanyujiapi.KanyujiAPI
+
+commands:
+  coins:
+    description: Coins
+  playtime:
+    description: Playtime
+  devtest:
+    description: Example
