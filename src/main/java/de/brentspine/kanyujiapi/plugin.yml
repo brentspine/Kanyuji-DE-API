@@ -9,5 +9,7 @@ commands:
     description: Coins
   playtime:
     description: Playtime
-  devtest:
-    description: Example
+  apitest:
+    description: Testing
+  friends:
+    description: Friends
