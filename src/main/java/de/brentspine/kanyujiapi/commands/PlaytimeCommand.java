@@ -15,14 +15,14 @@ import java.util.UUID;
 public class PlaytimeCommand implements CommandExecutor {
 
     //permissions
-        //See own           -       playtime.own
-        //See help          -       playtime.help
-        //Leaderboard       -       playtime.top
-        //Set Playtime      -       playtime.set
-        //Add Playtime      -       playtime.add
-        //Remove Playtime   -       playtime.remove
-        //Reset Playtime    -       playtime.reset
-        //See other player  -       playtime.other
+    //See own           -       playtime.own
+    //See help          -       playtime.help
+    //Leaderboard       -       playtime.top
+    //Set Playtime      -       playtime.set
+    //Add Playtime      -       playtime.add
+    //Remove Playtime   -       playtime.remove
+    //Reset Playtime    -       playtime.reset
+    //See other player  -       playtime.other
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -79,7 +79,7 @@ public class PlaytimeCommand implements CommandExecutor {
                     player.sendMessage(Playtime.PREFIX + "§cUsage: /playtime set <Player> <amount>");
                     break;
                 }
-                MySQLPlaytime.set(UUIDFetcher.getUUID(args[1]), Integer.valueOf(args[2]));
+                MySQLPlaytime.set(UUIDFetcher.getUUIDWithOfflinePlayer(args[1]), Integer.valueOf(args[2]));
                 player.sendMessage(Playtime.PREFIX + "You set §c" + MySQLPlaytime.formatTime(Integer.valueOf(args[2])) + "§7 for §c" + args[1]);
                 break;
             case "add":
@@ -97,7 +97,7 @@ public class PlaytimeCommand implements CommandExecutor {
                     player.sendMessage(Playtime.PREFIX + "§cUsage: /playtime add <Player> <amount>");
                     break;
                 }
-                MySQLPlaytime.addMinutesPlayed(UUIDFetcher.getUUID(args[1]), Integer.valueOf(args[2]));
+                MySQLPlaytime.addMinutesPlayed(UUIDFetcher.getUUIDWithOfflinePlayer(args[1]), Integer.valueOf(args[2]));
                 player.sendMessage(Playtime.PREFIX + "You added §c" + MySQLPlaytime.formatTime(Integer.valueOf(args[2])) + "§7 for §c" + args[1]);
                 break;
             case "remove":
@@ -115,7 +115,7 @@ public class PlaytimeCommand implements CommandExecutor {
                     player.sendMessage(Playtime.PREFIX + "§cUsage: /playtime remove <Player> <amount>");
                     break;
                 }
-                MySQLPlaytime.removeMinutesPlayed(UUIDFetcher.getUUID(args[1]), Integer.valueOf(args[2]));
+                MySQLPlaytime.removeMinutesPlayed(UUIDFetcher.getUUIDWithOfflinePlayer(args[1]), Integer.valueOf(args[2]));
                 player.sendMessage(Playtime.PREFIX + "You removed §c" + MySQLPlaytime.formatTime(Integer.valueOf(args[2])) + "§7 for §c" + args[1]);
                 break;
             case "reset":
@@ -127,7 +127,7 @@ public class PlaytimeCommand implements CommandExecutor {
                     player.sendMessage(Playtime.PREFIX + "§cUsage: /playtime reset <player>");
                     return true;
                 }
-                MySQLPlaytime.reset(UUIDFetcher.getUUID(args[1]));
+                MySQLPlaytime.reset(UUIDFetcher.getUUIDWithOfflinePlayer(args[1]));
                 player.sendMessage(Playtime.PREFIX + "The playtime for §c" + args[1] + "§7 was resetted");
                 break;
             default:
@@ -135,7 +135,7 @@ public class PlaytimeCommand implements CommandExecutor {
                     player.sendMessage(KanyujiAPI.getNoPerm(Playtime.PREFIX));
                     return true;
                 }
-                player.sendMessage(Playtime.PREFIX + "§c" + args[0] + "'s playtime: §7" + MySQLPlaytime.getFormattedTime( UUIDFetcher.getUUID(args[0]) ));
+                player.sendMessage(Playtime.PREFIX + "§c" + args[0] + "'s playtime: §7" + MySQLPlaytime.getFormattedTime( UUIDFetcher.getUUIDWithOfflinePlayer(args[0]) ));
                 break;
         }
         return false;

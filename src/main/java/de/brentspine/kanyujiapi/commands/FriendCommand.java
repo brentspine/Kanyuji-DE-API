@@ -1,9 +1,7 @@
 package de.brentspine.kanyujiapi.commands;
 
-import de.brentspine.kanyujiapi.mysql.MySQL;
 import de.brentspine.kanyujiapi.mysql.data.MySQLFriends;
 import de.brentspine.kanyujiapi.mysql.data.MySQLMessageLater;
-import de.brentspine.kanyujiapi.util.TextComponentBuilder;
 import de.brentspine.kanyujiapi.util.UUIDFetcher;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.*;
@@ -17,7 +15,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 

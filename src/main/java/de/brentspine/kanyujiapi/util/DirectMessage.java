@@ -1,7 +1,5 @@
 package de.brentspine.kanyujiapi.util;
 
-import java.sql.ResultSet;
-import java.sql.Time;
 import java.sql.Timestamp;
 
 public class DirectMessage {

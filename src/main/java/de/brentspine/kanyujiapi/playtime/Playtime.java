@@ -25,7 +25,7 @@ public class Playtime {
                 Bukkit.getConsoleSender().sendMessage(PREFIX + "Added 1 Minute Playtime to Online Players (" + playersNotAFK + "/" + Bukkit.getOnlinePlayers().size() + ")");
             }
         }.runTaskTimer(KanyujiAPI.instance, 20 * 60, 20 * 60);
-    return this;
+        return this;
     }
 
 }

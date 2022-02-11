@@ -2,7 +2,6 @@ package de.brentspine.kanyujiapi.mysql.stats;
 
 import de.brentspine.kanyujiapi.mysql.MySQL;
 import de.brentspine.kanyujiapi.util.UUIDFetcher;
-import org.bukkit.craftbukkit.libs.it.unimi.dsi.fastutil.Hash;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

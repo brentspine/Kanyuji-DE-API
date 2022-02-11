@@ -199,7 +199,6 @@ public class MySQLFriends {
             PreparedStatement ps = MySQL.con.prepareStatement("SELECT * FROM friendRequests WHERE uuid = ?");
             ps.setString(1, uuid.toString());
             ResultSet rs = ps.executeQuery();
-
             return rs.next();
         } catch (SQLException e) {
             return false;
@@ -212,7 +211,6 @@ public class MySQLFriends {
             ps.setString(1, uuid.toString());
             ps.setString(2, from.toString());
             ResultSet rs = ps.executeQuery();
-
             return rs.next();
         } catch (SQLException e) {
             return false;

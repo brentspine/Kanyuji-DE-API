@@ -1,6 +1,5 @@
 package de.brentspine.kanyujiapi.commands;
 
-import de.brentspine.kanyujiapi.mysql.data.MySQLPlaytime;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -12,4 +11,5 @@ public class APITestCommand implements CommandExecutor {
         //sender.sendMessage(MySQLPlaytime.updateLastOnline(););
         return false;
     }
+
 }
