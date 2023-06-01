@@ -1,3 +1,6 @@
+# Kanyuji.de API
+This is a pretty old project and is not optimized but should give your Minecraft Server a good foundation if you're getting started
+
 # SQL Tables
 
 Read the <a href="https://github.com/brentspine/Kanyuji-DE-Lobby">Lobby README.md</a> file for information, like features and setup
