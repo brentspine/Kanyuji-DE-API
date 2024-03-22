@@ -73,7 +73,7 @@ This table stores the data for the `/playtime` command and is handled by <a href
 
 <h2>SurfStats</h2>
 
-This tabale stores the data for the gamemode Surf. It is not part of the Lobby System but still needs to be included probably to ensure that the plugin works. You can remove it if you want. Handled by href="/src/main/java/de/brentspine/kanyujiapi/mysql/data/MySQLSurf.java">MySQLSurf</a><br>
+This tabale stores the data for the gamemode Surf. It is not part of the Lobby System but still needs to be included probably to ensure that the plugin works. You can remove it if you want. Handled by <a href="/src/main/java/de/brentspine/kanyujiapi/mysql/data/MySQLSurf.java">MySQLSurf</a><br>
 Also having the points field doesn't make sense, but yeaaaaaa... This was my first SQL experience and everything.
 
 | Field | Type | Extra |
